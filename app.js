@@ -24,10 +24,6 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-
-app.get('/blog/create', (req, re) => {
-    res.render('about', (title: 'about us'))
-});
 app.use((req, res) => {
     res.status(404).render('404');
 });
