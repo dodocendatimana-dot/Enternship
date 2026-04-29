@@ -2,8 +2,13 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+app.listen(port, () => {
+    console.log('server is listining on', port)
+});
+
+
 app.set('view engine', 'ejs');
-app.listen(port);
+
 app.use((req, res, next) => {
     console.log('new request made:');
     console.log('host: ', req.hostname);
